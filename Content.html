@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book a cab here!</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        
+    </head>
+    <body style = "color:white; background: rgb(2,0,36);
+    background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(41,41,238,1) 35%, rgba(0,212,255,1) 100%);">
+        <nav class="navbar bg-dark" class = "position:fixed; top:0; width:100%">
+            <div class="container-fluid">
+                <a class="navbar-brand mb-0 h1" style = "color:white" href = "#">Home</a>
+            </div>
+        </nav>
+        <center> 
+            <h1 style = "margin-top:50px"> Fare Rates</h1> 
+            <br>
+            <div style = "width:600px">
+                <table class="table table-dark table-striped-columns">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Car Type</th>
+                            <th scope="col">Cost (Rs/km)</th>
+                            <th scope="col">Driver Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Mini</td>
+                            <td>Rs 10</td>
+                            <td>Mr. Hussain</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Lux</td>
+                            <td>Rs 50</td>
+                            <td>Mr. Muhammed</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>SUV</td>
+                            <td>Rs 150</td>
+                            <td>Mr. Javed</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>Prime</td>
+                            <td>Rs 200</td>
+                            <td>Mr. Hasim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </center>
+        <br><br>
+        <div class = container style = "border:5px solid black;    
+                                        border-radius: 5px; 
+                                        color:black; 
+                                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                        font-weight:bold;"
+            <form action = "Success.html">
+                <p>Choose which fare you would like by number:</p>
+                <input type="radio" id="1" name="choice" value="1">
+                <label for="1">1. Mini</label><br>
+
+                <input type="radio" id="2" name="choice" value="2">
+                <label for="2">2. Lux</label><br>
+
+                <input type="radio" id="3" name="choice" value="3">
+                <label for="3">3. SUV</label><br>
+
+                <input type="radio" id="4" name="choice" value="4">
+                <label for="4">4. Prime</label><br><br>
+
+                <button class="btn btn-dark ml-auto" style="color:white; font-weight:bold;"  onclick="window.location.href = 'Success.html';">Submit</button>
+            </form>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+            $("#hidethis").click(function(){
+                $("#hidden").show("slow");
+                $("#hidethis").hide("slow");
+            })});
+        </script>
+        <br><br>
+        <button class = "btn btn-dark btn-lg" id = "hidethis" style = "margin-left:140px">Click to view terms of service</button>
+        <div id = "hidden" class="card" style = "margin-top:50px; display:none">
+            <h5 class="card-footer bg-dark">Basic Rules of service</h5>
+            <div class="card-body bg-black">
+              <p class="card-text">No smoking in the vehicle <br>No Drinking in the vehicle <br>Punctuality is appreciated.</p>
+              <a href="#top" class="btn btn-primary">Go back to top</a>
+            </div>
+          </div>
+    </body>
+</html>
